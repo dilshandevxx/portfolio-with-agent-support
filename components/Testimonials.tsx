@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
+import FadeIn from "./FadeIn";
 
 const testimonials = [
   {
@@ -38,18 +39,20 @@ export default function Testimonials() {
   return (
     <section className="py-24 px-6 md:px-12" id="testimonials">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
-        <div className="flex items-center gap-2 bg-zinc-800/50 border border-white/10 rounded-full px-4 py-1.5 text-xs font-medium text-zinc-300 mb-8">
+        <FadeIn className="flex items-center gap-2 bg-zinc-800/50 border border-white/10 rounded-full px-4 py-1.5 text-xs font-medium text-zinc-300 mb-8">
            <span className="w-2 h-2 rounded-full bg-yellow-500" />
            Customer feedback highlights
-        </div>
+        </FadeIn>
         
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
-          What People Say About Me?
-        </h2>
+        <FadeIn delay={0.1}>
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+            What People Say About Me?
+          </h2>
+        </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, index) => (
-            <div key={index} className="bg-[#111] border border-white/5 p-8 rounded-2xl hover:border-white/10 transition-colors">
+            <FadeIn key={index} delay={index * 0.1} className="bg-[#111] border border-white/5 p-8 rounded-2xl hover:border-white/10 transition-colors">
                <div className="flex gap-1 mb-6">
                  {[1, 2, 3, 4, 5].map((s) => (
                    <Star key={s} size={16} className="text-white fill-white" />
@@ -65,7 +68,7 @@ export default function Testimonials() {
                    <p className="text-zinc-500 text-xs">{t.handle}</p>
                  </div>
                </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

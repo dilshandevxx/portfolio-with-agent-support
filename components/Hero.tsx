@@ -1,4 +1,4 @@
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, MoveRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -11,11 +11,19 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col gap-8">
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight text-white">
-            Shaping <span className="inline-block bg-white rounded-full w-4 h-4 md:w-6 md:h-6 align-middle mx-1" /> Ideas <br />
-            into Real Projects <br />
-            that Deliver Results
-          </h1>
+          <div className="flex flex-col">
+              <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight text-white">
+                Shaping 
+                <span className="inline-flex items-center justify-center bg-white rounded-full w-8 h-8 md:w-12 md:h-12 align-middle mx-2 animate-[spin_10s_linear_infinite]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 md:w-6 md:h-6 text-black">
+                        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="currentColor"/>
+                    </svg>
+                </span> 
+                Ideas <br />
+                into Real Projects <br />
+                that Deliver Results
+              </h1>
+          </div>
           
           <p className="text-zinc-400 text-lg max-w-lg">
             Hi, I'm Djembar, a developer based in Indonesia with a passion for code.
